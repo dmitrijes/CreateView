@@ -21,14 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-rs-oxY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-rs-oxY">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
                                         <rect key="frame" x="112" y="8" width="151" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="9IY-ff-6ad"/>
+                                            <constraint firstAttribute="height" constant="49" id="Irw-aI-8pw"/>
+                                        </constraints>
                                         <state key="normal" title="Create">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -37,9 +39,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="leading" secondItem="Rww-rs-oxY" secondAttribute="leading" constant="112" id="94a-hZ-keT"/>
+                                    <constraint firstAttribute="trailing" secondItem="b4b-2O-3Rq" secondAttribute="trailing" constant="112" id="Lep-2x-Xrf"/>
+                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="top" constant="8" id="Muc-rI-ms4"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rww-rs-oxY" secondAttribute="trailing" id="1rS-zX-sPf"/>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Sap-cR-6NK"/>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eLe-Bt-ATi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="bottom" id="lVo-Hp-XP5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scrolling" destination="Rww-rs-oxY" id="RWY-cY-hUM"/>
