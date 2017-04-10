@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68665D0F1E9783FB00A6D3CA"
+               BlueprintIdentifier = "68EE41021E9B80EB002594CB"
                BuildableName = "ViewCreate.app"
                BlueprintName = "ViewCreate"
                ReferencedContainer = "container:ViewCreate.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68665D0F1E9783FB00A6D3CA"
+            BlueprintIdentifier = "68EE41021E9B80EB002594CB"
             BuildableName = "ViewCreate.app"
             BlueprintName = "ViewCreate"
             ReferencedContainer = "container:ViewCreate.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68665D0F1E9783FB00A6D3CA"
+            BlueprintIdentifier = "68EE41021E9B80EB002594CB"
             BuildableName = "ViewCreate.app"
             BlueprintName = "ViewCreate"
             ReferencedContainer = "container:ViewCreate.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68665D0F1E9783FB00A6D3CA"
+            BlueprintIdentifier = "68EE41021E9B80EB002594CB"
             BuildableName = "ViewCreate.app"
             BlueprintName = "ViewCreate"
             ReferencedContainer = "container:ViewCreate.xcodeproj">
