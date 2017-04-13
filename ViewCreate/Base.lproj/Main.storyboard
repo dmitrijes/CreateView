@@ -14,23 +14,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uc9-Ng-rCE"/>
-                        <viewControllerLayoutGuide type="bottom" id="TbK-zt-BcB"/>
+                        <viewControllerLayoutGuide type="top" id="Sda-VT-Ww3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rjn-s7-fMw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-rs-oxY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-rs-oxY">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
-                                        <rect key="frame" x="112" y="582" width="151" height="49"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
+                                        <rect key="frame" x="112" y="568" width="151" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="ZDb-dc-u5L"/>
-                                            <constraint firstAttribute="width" constant="151" id="z1D-XY-4Fq"/>
-                                        </constraints>
                                         <state key="normal" title="Create">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -39,21 +36,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="centerX" secondItem="Rww-rs-oxY" secondAttribute="centerX" id="BiC-XI-dFI"/>
-                                    <constraint firstAttribute="trailing" secondItem="b4b-2O-3Rq" secondAttribute="trailing" constant="112" id="GwU-bQ-aL4"/>
-                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="leading" secondItem="Rww-rs-oxY" secondAttribute="leading" constant="112" id="Sr1-xC-JLw"/>
-                                    <constraint firstAttribute="bottom" secondItem="b4b-2O-3Rq" secondAttribute="bottom" constant="8" id="dVc-Ae-vWR"/>
-                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="top" constant="582" id="tmN-E2-NnS"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Rww-rs-oxY" firstAttribute="top" secondItem="uc9-Ng-rCE" secondAttribute="bottom" constant="8" id="EnU-Ak-daG"/>
-                            <constraint firstItem="TbK-zt-BcB" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="bottom" id="VRh-eh-haT"/>
-                            <constraint firstItem="Rww-rs-oxY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j4V-h1-WNj"/>
-                            <constraint firstAttribute="trailing" secondItem="Rww-rs-oxY" secondAttribute="trailing" id="vbN-T1-C8s"/>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="top" secondItem="Sda-VT-Ww3" secondAttribute="bottom" constant="8" id="1Tf-CW-Cgt"/>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BSq-fI-aER"/>
+                            <constraint firstAttribute="trailing" secondItem="Rww-rs-oxY" secondAttribute="trailing" id="ZcG-Ji-0ZT"/>
+                            <constraint firstItem="rjn-s7-fMw" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="bottom" id="yn7-94-cFf"/>
                         </constraints>
                     </view>
                     <connections>
