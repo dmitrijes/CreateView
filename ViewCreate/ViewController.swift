@@ -17,33 +17,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        scrolling.translatesAutoresizingMaskIntoConstraints = false
-        buttonCreate.translatesAutoresizingMaskIntoConstraints = false
-        
-        let leftSide = NSLayoutConstraint(item: scrolling, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0)
-        let topSide = NSLayoutConstraint(item: scrolling, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 8)
-        let rightSide = NSLayoutConstraint(item: scrolling, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0)
-        let bottomSide = NSLayoutConstraint(item: scrolling, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0)
-        
-        view.addConstraints([leftSide, topSide, rightSide, bottomSide])
-        
-        let buttomCenter = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        let buttomTop = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 20)
-        let buttomWidth = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 150)
-        let buttomHeight = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 50)
-        
-        
-        scrolling.addConstraints([buttomCenter, buttomTop, buttomWidth, buttomHeight])
     }
     
     @IBAction func createView(_ sender: UIButton) {
+        
+        let newView = UIView()
+        //frame: CGRect(x: 10, y: count*10, width: 200, height: 90)
+        
+        let res = count*100
+        let centerHorizontal = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+        let newViewWidth = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 100)
+        let newViewHeight = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 90)
+        let newViewTop = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.topMargin, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.topMargin, multiplier: 1, constant: CGFloat(10 + res))
         count += 1
-        let newView = UIView(frame: CGRect(x: 10, y: count*100, width: 200, height: 90))
+        
+        
         
         newView.backgroundColor = UIColor.gray
+        newView.translatesAutoresizingMaskIntoConstraints = false
         scrolling.contentSize.height = CGFloat(count * 100 + 90)
         scrolling.addSubview(newView)
+        NSLayoutConstraint.activate([centerHorizontal, newViewWidth, newViewHeight, newViewTop])
+        //buttonCreate.translatesAutoresizingMaskIntoConstraints = false
+        //let firstButtom = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.topMargin, relatedBy: NSLayoutRelation.greaterThanOrEqual, toItem: newView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 110)
+        //let secondButtom = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 150)
+        
+        
+        //NSLayoutConstraint.activate([firstButtom, secondButtom])
         view.addSubview(scrolling)
+        
     }
 
 

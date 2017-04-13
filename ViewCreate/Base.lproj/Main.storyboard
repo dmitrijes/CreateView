@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,18 +13,24 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uc9-Ng-rCE"/>
+                        <viewControllerLayoutGuide type="bottom" id="TbK-zt-BcB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Rww-rs-oxY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-rs-oxY">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b4b-2O-3Rq">
-                                        <rect key="frame" x="112" y="8" width="151" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
+                                        <rect key="frame" x="112" y="582" width="151" height="49"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="ZDb-dc-u5L"/>
+                                            <constraint firstAttribute="width" constant="151" id="z1D-XY-4Fq"/>
+                                        </constraints>
                                         <state key="normal" title="Create">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -33,9 +39,22 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="centerX" secondItem="Rww-rs-oxY" secondAttribute="centerX" id="BiC-XI-dFI"/>
+                                    <constraint firstAttribute="trailing" secondItem="b4b-2O-3Rq" secondAttribute="trailing" constant="112" id="GwU-bQ-aL4"/>
+                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="leading" secondItem="Rww-rs-oxY" secondAttribute="leading" constant="112" id="Sr1-xC-JLw"/>
+                                    <constraint firstAttribute="bottom" secondItem="b4b-2O-3Rq" secondAttribute="bottom" constant="8" id="dVc-Ae-vWR"/>
+                                    <constraint firstItem="b4b-2O-3Rq" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="top" constant="582" id="tmN-E2-NnS"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="top" secondItem="uc9-Ng-rCE" secondAttribute="bottom" constant="8" id="EnU-Ak-daG"/>
+                            <constraint firstItem="TbK-zt-BcB" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="bottom" id="VRh-eh-haT"/>
+                            <constraint firstItem="Rww-rs-oxY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j4V-h1-WNj"/>
+                            <constraint firstAttribute="trailing" secondItem="Rww-rs-oxY" secondAttribute="trailing" id="vbN-T1-C8s"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonCreate" destination="b4b-2O-3Rq" id="YQP-HT-o8d"/>
@@ -44,12 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.5" y="38.5"/>
+            <point key="canvasLocation" x="32.800000000000004" y="34.632683658170919"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
