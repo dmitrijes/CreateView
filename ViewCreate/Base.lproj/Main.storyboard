@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iUU-Xo-cMN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sda-VT-Ww3"/>
                         <viewControllerLayoutGuide type="bottom" id="rjn-s7-fMw"/>
@@ -25,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-2O-3Rq">
-                                        <rect key="frame" x="112" y="568" width="151" height="50"/>
+                                        <rect key="frame" x="112" y="522" width="151" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" title="Create">
@@ -46,6 +47,7 @@
                             <constraint firstItem="rjn-s7-fMw" firstAttribute="top" secondItem="Rww-rs-oxY" secondAttribute="bottom" id="yn7-94-cFf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Test" image="1" id="wHz-Bt-16h"/>
                     <connections>
                         <outlet property="buttonCreate" destination="b4b-2O-3Rq" id="YQP-HT-o8d"/>
                         <outlet property="scrolling" destination="Rww-rs-oxY" id="RWY-cY-hUM"/>
@@ -53,7 +55,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.800000000000004" y="34.632683658170919"/>
+            <point key="canvasLocation" x="830" y="-385"/>
+        </scene>
+        <!--LayoutAnchorViewController-->
+        <scene sceneID="Y7S-xJ-MoL">
+            <objects>
+                <viewController id="b6y-1L-inL" userLabel="LayoutAnchorViewController" customClass="LayoutAnchorViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tB9-f6-ye9"/>
+                        <viewControllerLayoutGuide type="bottom" id="GfM-EK-vPJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSD-NZ-X31">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cir-UP-6aL">
+                                <rect key="frame" x="87" y="540" width="200" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dWN-HC-96s"/>
+                                </constraints>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cir-UP-6aL" firstAttribute="leading" secondItem="kSD-NZ-X31" secondAttribute="leadingMargin" constant="71" id="aQs-uX-uih"/>
+                            <constraint firstItem="GfM-EK-vPJ" firstAttribute="top" secondItem="Cir-UP-6aL" secondAttribute="bottom" constant="28" id="oY4-na-gyc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cir-UP-6aL" secondAttribute="trailing" constant="72" id="wrF-Ig-LIk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="2" id="Jl8-K9-cLF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICK-8T-rXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="35"/>
+        </scene>
+        <!--VisualFormatViewController-->
+        <scene sceneID="DmS-Lt-qYd">
+            <objects>
+                <viewController id="9VQ-4r-zPw" userLabel="VisualFormatViewController" customClass="VisualFormatViewController" customModule="ViewCreate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3OV-Ns-xQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="isj-fO-9uT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XoQ-PG-9J3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="3" id="zin-qN-EGj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLw-Aq-cOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="472"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ePy-mt-UkE">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iUU-Xo-cMN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bxN-GD-dxr">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i9p-e2-qQ8"/>
+                        <segue destination="b6y-1L-inL" kind="relationship" relationship="viewControllers" id="7UD-nv-aUp"/>
+                        <segue destination="9VQ-4r-zPw" kind="relationship" relationship="viewControllers" id="iQ8-zC-EJU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ax9-zD-Rov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-321" y="35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="25" height="25"/>
+        <image name="2" width="25" height="25"/>
+        <image name="3" width="25" height="25"/>
+    </resources>
 </document>

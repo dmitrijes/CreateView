@@ -20,10 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         buttonCreate.translatesAutoresizingMaskIntoConstraints = false
-        centerButton = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        buttonWidth = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 200)
-        buttonHeight = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 50)
-        buttonTop = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 20)
+        centerButton = NSLayoutConstraint(item: buttonCreate, attribute: .centerX, relatedBy: .equal, toItem: scrolling, attribute: .centerX, multiplier: 1, constant: 0)
+        buttonWidth = NSLayoutConstraint(item: buttonCreate, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 200)
+        buttonHeight = NSLayoutConstraint(item: buttonCreate, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 50)
+        buttonTop = NSLayoutConstraint(item: buttonCreate, attribute: .top, relatedBy: .equal, toItem: scrolling, attribute: .top, multiplier: 1, constant: 20)
         NSLayoutConstraint.activate([centerButton, buttonWidth, buttonHeight, buttonTop])
     }
     
@@ -35,10 +35,10 @@ class ViewController: UIViewController {
         }
         let newView = UIView()
         newView.translatesAutoresizingMaskIntoConstraints = false
-        let centerHorizontalView = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        let newViewWidth = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 100)
-        let newViewHeight = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 90)
-        let newViewTop = NSLayoutConstraint(item: newView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: scrolling, attribute: NSLayoutAttribute.top, multiplier: 1, constant: CGFloat(count*100 + 10))
+        let centerHorizontalView = NSLayoutConstraint(item: newView, attribute: .centerX, relatedBy: .equal, toItem: scrolling, attribute: .centerX, multiplier: 1, constant: 0)
+        let newViewWidth = NSLayoutConstraint(item: newView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 100)
+        let newViewHeight = NSLayoutConstraint(item: newView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 90)
+        let newViewTop = NSLayoutConstraint(item: newView, attribute: .top, relatedBy: .equal, toItem: scrolling, attribute: .top, multiplier: 1, constant: CGFloat(count*100 + 10))
         newView.backgroundColor = UIColor.gray
         count += 1
         newbuttonTop = NSLayoutConstraint(item: buttonCreate, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: newView, attribute: NSLayoutAttribute.bottomMargin, multiplier: 1, constant: 20)
