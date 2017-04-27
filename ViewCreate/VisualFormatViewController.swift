@@ -19,6 +19,7 @@ class VisualFormatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         buttonCreate.translatesAutoresizingMaskIntoConstraints = false
     
@@ -52,5 +53,10 @@ class VisualFormatViewController: UIViewController {
         
         count += 1
     }
+=======
+
+    }
+
+>>>>>>> origin/dev
 
 }
