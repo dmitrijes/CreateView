@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iUU-Xo-cMN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iUU-Xo-cMN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-<<<<<<< HEAD
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-=======
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
->>>>>>> origin/dev
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,11 +75,7 @@
                                         <rect key="frame" x="87" y="25" width="200" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-<<<<<<< HEAD
                                         <state key="normal" title="Create">
-=======
-                                        <state key="normal" title="Button">
->>>>>>> origin/dev
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -96,10 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8bb-uU-i7Y" secondAttribute="trailing" id="Bfr-Rf-7Mg"/>
-<<<<<<< HEAD
                             <constraint firstItem="8bb-uU-i7Y" firstAttribute="width" secondItem="kSD-NZ-X31" secondAttribute="width" id="fAi-Xx-ja1"/>
-=======
->>>>>>> origin/dev
                             <constraint firstItem="GfM-EK-vPJ" firstAttribute="top" secondItem="8bb-uU-i7Y" secondAttribute="bottom" id="foz-d8-ofG"/>
                             <constraint firstItem="8bb-uU-i7Y" firstAttribute="leading" secondItem="kSD-NZ-X31" secondAttribute="leading" id="g4v-dp-2ig"/>
                             <constraint firstItem="8bb-uU-i7Y" firstAttribute="top" secondItem="tB9-f6-ye9" secondAttribute="bottom" id="lp4-SD-a3Y"/>

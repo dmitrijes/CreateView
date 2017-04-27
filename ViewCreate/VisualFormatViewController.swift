@@ -19,15 +19,12 @@ class VisualFormatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         
         buttonCreate.translatesAutoresizingMaskIntoConstraints = false
     
-        let buttonHorizontal = "[buttonCreate(200)]"
-        let buttonVertical = "V:|-20-[buttonCreate(50)]"
         let views = ["buttonCreate" : buttonCreate!]
-        let buttonHorizontalConstrains = NSLayoutConstraint.constraints(withVisualFormat: buttonHorizontal, options: [], metrics: nil, views: views)
-        let buttonVerticalConstrains = NSLayoutConstraint.constraints(withVisualFormat: buttonVertical, options: [], metrics: nil, views: views)
+        let buttonHorizontalConstrains = NSLayoutConstraint.constraints(withVisualFormat: "|-[buttonCreate(200)]-|", options: [], metrics: nil, views: views)
+        let buttonVerticalConstrains = NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[buttonCreate(50)]", options: [], metrics: nil, views: views)
         allConstraintsForButton += buttonHorizontalConstrains
         allConstraintsForButton += buttonVerticalConstrains
         
@@ -35,16 +32,16 @@ class VisualFormatViewController: UIViewController {
     }
 
     @IBAction func createView(_ sender: UIButton) {
-        
+         NSLayoutConstraint.deactivate(allConstraintsForButton)
         let newView = UIView()
+    
         newView.backgroundColor = UIColor.red
         newView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(newView)
-        let newViewHorizontal = "|-[newView(1000)]-|"
-        let newViewVertical = "|-[newView(1000)]-|"
+    
         let newViews = ["newView" : newView]
-        let newViewHorizontalConstrains = NSLayoutConstraint.constraints(withVisualFormat: newViewHorizontal, options: [], metrics: nil, views: newViews)
-        let newViewVerticalConstrains = NSLayoutConstraint.constraints(withVisualFormat: newViewVertical, options: [], metrics: nil, views: newViews)
+        let newViewHorizontalConstrains = NSLayoutConstraint.constraints(withVisualFormat: "|-[newView(100)]-|", options: [], metrics: nil, views: newViews)
+        let newViewVerticalConstrains = NSLayoutConstraint.constraints(withVisualFormat: "|-20-[newView(100)]-|", options: [], metrics: nil, views: newViews)
         allConstraintsForView += newViewHorizontalConstrains
         allConstraintsForView += newViewVerticalConstrains
         
@@ -53,10 +50,5 @@ class VisualFormatViewController: UIViewController {
         
         count += 1
     }
-=======
-
-    }
-
->>>>>>> origin/dev
 
 }
